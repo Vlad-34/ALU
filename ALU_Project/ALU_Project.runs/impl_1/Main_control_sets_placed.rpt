@@ -1,0 +1,81 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Dec 22 11:03:32 2022
+| Host         : Vlad-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
+| Design       : Main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    52 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      5 |            1 |
+|      6 |            2 |
+|      8 |            1 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |            9 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              25 |            7 |
+| Yes          | No                    | No                     |              92 |           35 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             114 |           28 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------+------------------------+------------------+----------------+
+|  Clock Signal  |      Enable Signal     |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++----------------+------------------------+------------------------+------------------+----------------+
+|  Clk_IBUF_BUFG | debouncer/eqOp         |                        |                1 |              1 |
+|  Clk_IBUF_BUFG | divide/ErrDiv01_out    |                        |                1 |              1 |
+|  Clk_IBUF_BUFG | divide/Q[7]            |                        |                3 |              5 |
+|  Clk_IBUF_BUFG | multiply/Q[15]_i_1_n_0 |                        |                2 |              6 |
+|  Clk_IBUF_BUFG | divide/Q[7]_i_1_n_0    |                        |                3 |              6 |
+|  Clk_IBUF_BUFG | multiply/Q             |                        |                3 |              8 |
+|  Clk_IBUF_BUFG |                        |                        |                9 |             21 |
+|  Clk_IBUF_BUFG |                        | debouncer/Enable       |                7 |             25 |
+|  Clk_IBUF_BUFG | divide/Q[7]            | divide/Q[7]_i_1_n_0    |                5 |             26 |
+|  Clk_IBUF_BUFG | divide/BS2_out         | divide/C[30]_i_1_n_0   |               10 |             31 |
+|  Clk_IBUF_BUFG | multiply/A[31]_i_1_n_0 |                        |               10 |             32 |
+|  Clk_IBUF_BUFG | divide/A               |                        |               12 |             33 |
+|  Clk_IBUF_BUFG | multiply/Q             | multiply/Q[15]_i_1_n_0 |               13 |             57 |
++----------------+------------------------+------------------------+------------------+----------------+
+
+
